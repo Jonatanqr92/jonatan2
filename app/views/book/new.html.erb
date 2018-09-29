@@ -1,0 +1,19 @@
+<h3>crear libro</h3>
+<form method="post" action="<%=libros_crear_path%>">
+<%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+<div>
+<label>Nombre</label>
+<br>
+<input type="text" placeholder="ingrese el nombre" name="book[title]">
+</div>
+
+<div>
+<label>descripcion</label>
+<br>
+<textarea name="book[descripcion]"></textarea>
+</div>
+<div>
+<button type="submit">Crear</button>
+</div>
+</form>
+

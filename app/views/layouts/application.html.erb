@@ -10,6 +10,22 @@
   </head>
 
   <body>
+  
+<% if user_signed_in? %>
+<%= current_user.email %>
+<a href="<%= destroy_user_session_path %>"
+data-method="delete">
+cerrar sesion 
+</a>
+<% else %>
+<a  href="<%= new_user_session_path %>">
+log in 
+</a>
+<a href="<%= new_user_registration_path %>">
+registrarse
+</a>
+
+<% end %>
     <%= yield %>
   </body>
 </html>
